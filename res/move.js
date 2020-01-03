@@ -9,7 +9,7 @@ function getRem(pwidth,prem){
     var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
     // console.log(oWidth);console.log(oWidth/pwidth*prem + "px");
     html.style.fontSize = oWidth/pwidth*prem + "px";
-    if(oWidth>=600){
+    if(oWidth>=600){//当屏幕宽度大于600
         html.style.fontSize = 34 + "px";
     }
 
