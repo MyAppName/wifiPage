@@ -1,0 +1,541 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>大兴医院WiFi登录</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="author" content="CSS5, css5.com.cn" />
+<script src="./res/move.js"> </script>
+<style>
+*{margin: 0;padding: 0;}
+body{font-family:"Microsoft YaHei",Arial; overflow-x:hidden; overflow-y:auto;background-image: url("./res/imgs/loginBg.png");background-size: 100%;}
+.content{margin-top: 4rem;}
+.margL{margin-left: 0.85rem;}
+
+.user1{
+    width: 9rem;
+    height: 6.75rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #cccccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top-color: #cccccc;
+    /* opacity: 0.1; */
+
+}
+.user2{
+    width: 9rem;
+    height: 10.5rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #cccccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.type{
+    margin-top: 0.5rem;
+    font-size: 0.4rem;
+    font-weight: 900;
+}
+.options{
+    width: 7.8rem;
+    height: 0.9rem;
+    border-radius: 10px; 
+    margin-top: 0.84rem;
+    background-color: #cccccc;
+}
+.option{
+    float: left;
+    width: 50%;
+    height: 100%;
+    font-size: 0.28rem;
+    text-align: center;
+    line-height: 0.9rem;
+    color: #666666;
+}
+.input1{
+    margin-top: 0.5rem;
+}
+.input2{
+    margin-top: 0.3rem;
+}
+.inputStyle{
+    width: 7.8rem;
+    height: 1.4rem;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    outline: none;
+    padding-left: 0.3rem;
+    font-size: 0.32rem;
+}
+.inputStyle:hover{
+    border: 1px solid #77bea0;
+}
+.input{
+    position: relative;
+}
+.title{
+    background-color: #ffffff;
+    font-size: 0.22rem;
+    color: #666666;
+    position: absolute;
+    left: 0.3rem;
+    top: 0rem;
+    padding-left: 0.15rem;
+    padding-right: 0.15rem;
+}
+.changePassword{
+    position: absolute;
+    right: 0.3rem;
+    top: 0.7rem;
+    font-size: 0.22rem;
+    color: #77bea0;
+}
+.btn{
+    font-size: 0.4rem;
+    margin-top: 0.6rem;
+    color: #77bea0;
+    font-weight: 900;
+}
+.to1{
+    width: 7.8rem;
+    height: 1.4rem;
+    font-size: 0.4rem;
+    font-weight: 900;
+    color: #cccccc;
+    background-color: #f4f4f4;
+    line-height: 1.4rem ;
+    text-align: center;
+    margin-left: 0.6rem;
+    box-shadow: 2px 2px 2px #cccccc;
+    /* z-index: -1; */
+    /* margin-top: 0.06rem; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.to2{
+    width: 7.8rem;
+    height: 1.4rem;
+    font-size: 0.4rem;
+    font-weight: 900;
+    color: #cccccc;
+    background-color: #f4f4f4;
+    line-height: 1.4rem ;
+    text-align: center;
+    margin-left: 0.6rem;
+    box-shadow: 3px 3px 3px #cccccc;
+    /* z-index: -1; */
+    margin-top: 0.05rem;
+    /* border-radius: 10px; */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.agree{
+    width: 10.8rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    overflow: hidden;
+    
+}
+.Agree{
+    width: 10rem;
+    height: 6.75rem;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    /* box-shadow: 3px 3px 3px #cccccc; */
+
+}
+.userKnow{
+    font-size: 0.28rem;
+    width: 8.8rem;
+    height: 5rem;
+    margin-left: 0.6rem;
+    margin-top: 0.5rem;
+    overflow: scroll;
+}
+.agr{
+    width: 1.5rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    text-align: center;
+    font-size: 0.38rem;
+    margin-left: 4.2rem;
+    margin-top: 0.4rem;
+    background-color: #77bea0;
+    color: #ffffff;
+    border: 10px;
+}
+/*  */
+@media only screen and (min-width: 600px) {
+    .login{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    }
+    .agree{
+    width: 60rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    overflow: hidden;
+    
+}
+.Agree{
+    width: 15rem;
+    height: 10rem;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    /* box-shadow: 3px 3px 3px #cccccc; */
+
+}
+.userKnow{
+    font-size: 0.28rem;
+    width: 96%;
+    height: 80%;
+    /* margin-left: 0.6rem;
+    margin-top: 0.5rem; */
+    overflow: scroll;
+}
+.agr{
+    width: 1.5rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    text-align: center;
+    font-size: 0.38rem;
+    margin: 0.5rem auto;
+    background-color: #77bea0;
+    color: #ffffff;
+    border: 10px;
+}
+    
+}
+/*  */
+</style>
+</head>
+
+<body>
+<div class="content margL">
+    <!-- 员工通道 -->
+        <div class="login login1">
+                <div class="to1">访者登录</div>
+                <div class="user1">
+                    <div class="type">员工通道</div>
+                    <div class="input input1">
+                        <input class="inputStyle user1_zh" type="text"  placeholder="请输入账号"  onkeyup="value=value.replace(/[^\w\.\/]/ig,'')">
+                        <span class="title">账号</span>
+                        <div class="changePassword user1_zh-div"></div>
+                    </div>
+                    <div class="input input2">
+                           <input class="inputStyle user1_mm" type="password" placeholder="请输入密码">
+                           <span class="title">密码</span>
+                            <a class="changePassword" href="./changePassword.html">修改密码</a>
+                       </div>
+                   <div class="btn">登录</div>
+                </div>
+        </div>
+    <!-- 访者登录 -->
+    <div class="login login2">
+     <div class="user2">
+         <div class="type">访者登录</div>
+         <div class="options">
+             <div class="option option1">医保卡号</div>
+             <div class="option option2">身份证号</div>
+         </div>
+         <div class="input input1 card">
+             <input class=" inputStyle user2_card" type="text" placeholder="请输入医保卡号">
+             <span class="title">医保卡号</span>
+             <div class="changePassword user2_card-div"></div>
+             
+         </div>
+         <div class="input input1 ID">
+            <input class=" inputStyle user2_Id" type="text" placeholder="请输入身份证号">
+            <span class="title">身份证号</span>
+            <div class="changePassword user2_Id-div"></div>
+            
+        </div>
+         <div class="input input2">
+                <input class="inputStyle user2_name" type="text" placeholder="请输入姓名">
+                <span class="title">姓 名</span>
+                <div class="changePassword user2_name-div"></div>
+        </div>
+        <div class="input input2">
+                <input class="inputStyle user2_phone" type="text" placeholder="请输入手机号">
+                <span class="title">手机号</span>
+                <div class="changePassword user2_phone-div"></div>
+        </div>
+        <div class="btn">登录</div>
+     </div>
+     <div class="to2">员工通道</div>
+    </div>
+    <div class="agree">
+        
+    </div>
+    <div class="Agree">
+            <div class="userKnow">
+                    <div style="margin-left: 50%;transform: translateX(-20%);">用户须知</div> 
+                  <p>特别提示：</p>  
+                     <p>
+                            尊敬的用户，在使用“wifi”前，请您务必认真阅读和遵守本《用户须知》中规定的所有权利和限制。请您务必审慎阅读、充分理解各条款内容，特别是免除或者限制责任的条款、争议解决和法律适用条款。免除或者限制责任的条款可能将以加粗字体显示，您应重点阅读。如您对协议有任何疑问的或不认可，应立即停止使用服务。
+                     </p>   
+                    <p>
+                            当您按照注册页面提示填写信息、阅读并同意本《用户须知》且完成全部注册程序后，即表示您已充分阅读、理解并接受本《用户须知》的全部内容，并与医院平台达成协议。您承诺接受并遵守本《用户须知》项下的各项约定，届时您不应以未阅读本协议的内容或者未获得本平台对您问询的解答等理由，主张本《用户须知》无效，或要求撤销本《用户须知》。
+                    </p>
+                    
+                    
+                    
+                    <span> 第一条 服务内容</span>  
+                    
+                    
+                    
+                    <p>
+                        1.1  
+                     </p>
+                    
+                    <p>第二条 注册与用户信息
+                    </p>
+                    
+                    <p>2.1  您确认，在您完成注册程序允许的方式实际使用本平台服务时。</p>
+                    
+                    
+                    <p> 2.2 个人注册成为本平台用户后通过手机号及医保卡登入本平台。用户对个人手机号的安全负全部责任。在任何情况下，用户均不得授权任何第三方使用本人账户，且对因此产生的后果自行承担全部责任。
+                </p>
+                    
+                <p>  2.3 本平台承诺尊重用户个人隐私，不公开用户的任何个人信息，除以下情况外： 
+                </p>
+                <p>（1）用户授权本平台透露这些信息。 
+                </p>
+                <p>（2）相应的法律及程序要求本平台提供用户的个人资料。 
+                </p>
+                <p>（3）为提供相关的服务而将必要信息提交给第三方。 
+                </p>
+                    
+                <p> 第三条 条款的修改
+                </p>
+                    
+                <p> 3.1 本平台将可能不定期的修改本《用户须知》的有关条款，一旦条款及服务内容产生变动， 本平台将会在重要页面上提示修改内容。如果不同意本平台对条款内容所做的修改，用户可以主动停止对本平台服务的使用。如果用户继续使用本平台的服务，则视为接受服务条款的变动。本平台保留随时修改或中断服务而不需告知用户的权利。本平台行使修改或中断服务的权利，不需对用户或第三方负责。
+                </p>
+                    
+                <p> 第四条 拒绝提供担保
+                </p>
+                    
+                <p> 4.1  用户个人对网络服务的使用承担风险。本站对此不作任何类型的担保，不论是明确的或隐含的。本站不担保服务一定能满足用户的要求，也不担保服务不会受中断，对服务的及时性，安全性，出错发生都不作担保。
+                </p>
+                    
+                <p> 4.2  作为第三方网络平台服务提供者，本平台对本平台上发布的任何产品、活动、服务，或进行的交易进程，不作任何担保。用户在实际参与活动、接受服务产品时与活动组织者发生的任何纠纷，由用户与活动组织者自行协商解决。
+                </p>
+                <p> 第七条 有限责任
+                </p>
+                    
+                <p>8.1  本平台负责按"现状"和"可得到"的状态向用户提供网络平台服务。但本平台对网络平台服务不作任何明示或暗示的保证，包括但不限于网络平台服务的适用性、没有错误或疏漏、 持续性、准确性、可靠性、适用于某一特定用途。同时，本平台也不对网络平台服务所涉及的技术及信息的有效性、准确性、正确性、可靠性、质量、稳定、完整和及时性作出任何承诺和保 证。
+                </p>
+                    
+                <p>第八条 关于链接
+                </p>
+                    
+                <p>9.1 本平台可能会提供与其他国际互联网网站或资源进行链接。对于前述网站或资源是否可以利用，本平台不予担保。因使用或依赖上述网站或资源所产生的损失或损害，本平台也不承担任何责任。
+                </p>
+                    
+                <p>第九条 知识产权及其他权利
+                </p>
+                    
+                <p>9.1 本平台对平台中所使用的软件和受知识产权或其他法律保护的资料享有相应的权利； 经由本平台传送的资讯及内容，受到著作权法、商标法、专利法或其他法律的保护；未经本平台明示授权许可，用户不得进行修改、出租、散布或衍生其他作品。
+                </p>
+                    
+                <p> 第十条 用户管理
+                </p>
+                    
+                <p>10.1  用户单独承担使用平台服务的责任。用户对服务的使用是根据所有适用于本站的国家法律、地方法律和国际法律标准的。用户必须遵循： 
+                </p>
+                <p>（1）从中国境内向外传输技术性资料时必须符合中国有关法规。 
+                </p>
+                <p>（2）使用网络服务不作非法用途。 
+                </p>
+                <p>（3）不干扰或混乱网络服务。 
+                </p>
+                <p> （4）遵守所有使用网络服务的网络协议、规定、程序和惯例。
+                </p>
+                    
+                <p>用户须承诺不传输任何非法的、骚扰性的、中伤他人的、辱骂性的、恐性的、伤害性的、庸俗的， 淫秽等信息资料。另外，用户也不能传输何教唆他人构成犯罪行为的资料；不能传输助长国内不利条件和涉及国家安全的资料；不能传输任何不符合当地法规、国家法律和国际法律 的资料。未经许可而非法进入其它电脑系统是禁止的。
+                </p>
+                    
+                <p> 若用户的行为不符合以上提到的服务条款，本平台将作出独立判断立即取消用户服务帐号。 用户需对自己在网上的行为承担法律责任。用户若在本平台上散布和传播反动、色情或其它 违反国家法律的信息，本平台的系统记录有可能作为用户违反法律的证据。
+                </p>
+                    
+                <p>第十一条 结束服务
+                </p>
+                    
+                <p> 11.1 用户或本平台可随时根据实际情况中断一项或多项网络服务。本平台不需对任何个人或第三方负责而随时中断服务。用户对后来的条款修改有异议，或对本站的服务不满，可以行使如下权利： 
+                </p>
+                <p>（1）停止使用本平台的网络服务。 
+                </p>
+                <p>（2）通告本平台停止对该用户的服务。
+                </p>
+                    
+                <p>结束用户服务后，用户使用网络服务的权利马上中止。从那时起，用户有权利，本平台也没有义务传送任何未处理的信息或未完成的服务给户或第三方。
+                </p>
+                    
+                <p>第十二条 法律管辖和适用
+                </p>
+                    
+                <p> 12.1  本《用户须知》的订立、执行和解释及争议的解决均应适用中国法律。
+                </p>
+                    
+                <p>12.2  如发生本《用户须知》项下条款与中国法律相抵触时，则这些条款将完全按法律规定重新解释，而其它合法条款则依旧保持对用户产生法律效力和影响。
+                </p>
+                    
+                <p>12.3  如双方就本《用户须知》内容或其执行发生任何争议，双方应尽力友好协商解决；协商 不成时，任何一方均可向本平台所在地的人民法院提起诉讼。
+                </p>
+            </div>
+            <div class="agr">我同意</div>
+           </div>
+</div>
+</body>
+<script src="./res/jquery.min.js"> </script>
+<script>
+$(document).ready(function() {
+    $(".ID").hide();$(".login1").hide();
+    $(".option1").css({"border-top-left-radius":"10px","border-bottom-left-radius":"10px","background-color":"#77bea0","color":" #ffffff"});
+    //   员工账号密码
+    let usname,psword;
+    // 医保卡，身份证，姓名，电话
+        let card,ID,name,phone,isAgree=false;
+        // 医保卡/身份证 切换
+        $(".content").on("click",".option1",function(){
+            $(this).css({"border-top-left-radius":"10px","border-bottom-left-radius":"10px","background-color":"#77bea0","color":" #ffffff"});
+            $(".option2").css({"background-color":"#cccccc","color":" #666666"});
+            $(".ID").hide();$(".card").show();
+        });
+        $(".content").on("click",".option2",function(){
+            $(this).css({"border-top-right-radius":"10px","border-bottom-right-radius":"10px","background-color":"#77bea0","color":" #ffffff"});
+            $(".option1").css({"background-color":"#cccccc","color":" #666666"});
+            $(".ID").show();$(".card").hide();
+        });
+        // 员工访者切换
+        $(".content").on("click",".to1",function(){
+            $(".login2").show();
+            $(".login1").hide();
+        });
+        $(".content").on("click",".to2",function(){
+            $(".login1").show();$(".login2").hide();
+        });
+// 我同意
+        $(".content").on("click",".agr",function(){
+            $(".agree").hide();
+            $(".Agree").hide();
+            isAgree=true;
+            // $(".user1").css("opacity","1");
+        });
+        // 获取用户输入的信息
+        $(".content").on("input",".user1_zh",function(e){
+            // console.log(e.target.value);
+            usname=e.target.value;
+            // 对用户输入的信息进行判断，并反馈给用户
+            if(usname.length<6){
+                $(".user1_zh-div").text("不得低于六位");
+                $(".user1_zh-div").css({"color":" red"});
+            }
+            if(usname.length>=6){
+                $(".user1_zh-div").text("");
+                $(".user1_zh-div").css({"color":"#77bea0"});
+            }
+        });
+        $(".content").on("input",".user1_mm",function(e){
+            psword=e.target.value;
+            // 对用户输入的信息进行判断，并反馈给用户
+            if(psword.length<6){
+                $(".user1_mm-div").text("不得低于六位");
+                $(".user1_mm-div").css({"color":" red"});
+            }
+            if(psword.length>=6){
+                $(".user1_mm-div").text("");
+                $(".user1_mm-div").css({"color":"#77bea0"});
+            }
+
+        });
+        $(".content").on("input",".user2_card",function(e){
+
+            card=e.target.value;
+            // 对用户输入的信息进行判断，并反馈给用户
+            if(card.length<6){
+                $(".user2_card-div").text("不得低于六位");
+                $(".user2_card-div").css({"color":" red"});
+            }
+            if(card.length>=6){
+                $(".user2_card-div").text("");
+                $(".user2_card-div").css({"color":"#77bea0"});
+            }
+        });$(".content").on("input",".user2_Id",function(e){
+
+            ID=e.target.value;
+            // 对用户输入的信息进行判断，并反馈给用户
+            if(ID.length<6){
+                $(".user2_Id-div").text("不得低于六位");
+                $(".user2_Id-div").css({"color":" red"});
+            }
+            if(ID.length>=6){
+                $(".user2_Id-div").text("");
+                $(".user2_Id-div").css({"color":"#77bea0"});
+            }
+        });$(".content").on("input",".user2_name",function(e){
+
+            name=e.target.value;
+            // 对用户输入的信息进行判断，并反馈给用户
+            if(name.length<6){
+                $(".user2_name-div").text("不得低于六位");
+                $(".user2_name-div").css({"color":" red"});
+            }
+            if(name.length>=6){
+                $(".user2_name-div").text("");
+                $(".user2_name-div").css({"color":"#77bea0"});
+            }
+        });$(".content").on("input",".user2_phone",function(e){
+
+            phone=e.target.value;
+            // 对用户输入的信息进行判断，并反馈给用户
+            if(phone.length<6){
+                $(".user2_phone-div").text("不得低于六位");
+                $(".user2_phone-div").css({"color":" red"});
+            }
+            if(phone.length>=6){
+                $(".user2_phone-div").text("");
+                $(".user2_phone-div").css({"color":"#77bea0"});
+            }
+        });
+        // 登录
+        $(".content").on("click",".btn",function(){
+
+         if(isAgree){
+            window.location.href="./success.html";
+         }else{
+            alert("请阅读用户须知，并点击我同意按钮");
+         }
+
+        });
+        
+        
+
+    });
+</script>
+</html>
